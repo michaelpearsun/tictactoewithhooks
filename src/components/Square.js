@@ -7,7 +7,7 @@ const Square = ({value, onClick}) => {
         <button 
             className="style" 
             onClick={onClick}
-           // className={props.squareClassName}    
+            className={this.props.squareClassName}    
         >
             {value}
         </button>

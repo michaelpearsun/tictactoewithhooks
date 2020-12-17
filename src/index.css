@@ -40,6 +40,15 @@ h1 {
   outline: none;
 }
 
+.red-squares {
+  background:red;
+  border: none;
+  font-size: 5rem;
+  /* font-weight: 800; */
+  cursor: pointer;
+  outline: none;
+}
+
 .X {
   color: red;
 }

@@ -10,6 +10,7 @@ const Game = () => {
     const xO = xIsNext ? "X" : "O";
 
     const handleClick = (i) => {
+        const squareClassName = (this.props.winningSquares && this.props.winningSquares.includes(i))? 'red-square' : 'square';
         const historyPoint = history.slice(0, stepNumber + 1);
         const current = historyPoint[stepNumber];
         const squares = [...current];
@@ -36,7 +37,7 @@ const Game = () => {
                 </li>
             );
         })
-
+        
     return(
         <>
             <h1>Tic Tac Toe - with Hooks</h1>
@@ -44,6 +45,7 @@ const Game = () => {
                 squares={history[stepNumber]} 
                 onClick={handleClick} 
                 winningSquares={(winner) ? winner.winningSquares : null}
+                squareClassName={squareClassName}
             />
             <div className="info-wrapper">
                 <div>
